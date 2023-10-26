@@ -1,10 +1,10 @@
 package com.example.LibraryManagementSystem.Services;
 
 
+import com.example.LibraryManagementSystem.Entities.Student;
 import com.example.LibraryManagementSystem.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.*;
 
 @Service
 public class StudentService {
@@ -14,4 +14,8 @@ public class StudentService {
 
 //    @Autowired
 //    private JavaMailSender mailSender;
+    public String addStudent(Student student){
+        studentRepository.save(student);
+        return "Student added.";
+    }
 }

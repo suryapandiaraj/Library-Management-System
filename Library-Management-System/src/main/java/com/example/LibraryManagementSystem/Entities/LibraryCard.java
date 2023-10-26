@@ -25,6 +25,16 @@ public class LibraryCard {
     @OneToMany(mappedBy = "card",cascade = CascadeType.ALL)
         private List<Transaction> transactionsList = new ArrayList<>();
 
+    private int noOfBooksIssued;
+
+    public int getNoOfBooksIssued() {
+        return noOfBooksIssued;
+    }
+
+    public void setNoOfBooksIssued(int noOfBooksIssued) {
+        this.noOfBooksIssued = noOfBooksIssued;
+    }
+
     public Long getCardNumber() {
         return cardNumber;
     }
